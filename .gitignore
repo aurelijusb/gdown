@@ -1,4 +1,9 @@
 .idea
 *.iml
 job.json
-gdown
+/gdown
+/gup
+/test-data
+/summary.json
+/job-archive-retrieval.json
+/job-initiated.json
