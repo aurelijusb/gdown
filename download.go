@@ -88,7 +88,9 @@ func downloadFile(jobFileName string, outputFilename string) (err error) {
     }
     defer out.Close()
 
-    _, err = io.Copy(out, resp.Body)
+
+    buf := make([]byte, 1024)
+    _, err = io.CopyBuffer(out, resp.Body, buf)
     if err != nil  {
         return err
     }
